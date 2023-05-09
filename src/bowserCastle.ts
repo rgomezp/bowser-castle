@@ -4,11 +4,14 @@ export interface IBowserCastle extends Bowser.Parser.Details {
   tablet: boolean;
 }
 
-const browserInfo = Bowser.getParser(window.navigator.userAgent);
-const bowserCastle = {
-  ...browserInfo,
-  mobile: browserInfo.getPlatformType(true) === "mobile",
-  tablet: browserInfo.getPlatformType(true) === "tablet",
-};
+const detect = (navigator: Navigator): IBowserCastle => {
+  const browserInfo = Bowser.getParser(navigator.userAgent ?? '');
+  const bowserCastle = {
+    ...browserInfo,
+    mobile: browserInfo.getPlatformType(true) === "mobile",
+    tablet: browserInfo.getPlatformType(true) === "tablet",
+  };
+  return bowserCastle;
+}
 
-export default bowserCastle as IBowserCastle;
+export default detect(typeof navigator !== 'undefined' ? navigator : {} as Navigator);
