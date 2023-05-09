@@ -1,0 +1,26 @@
+{
+  "name": "bowser-castle",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/bowserCastle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rgomezp/bowser-castle.git"
+  },
+  "author": "Rodrigo Gomez-Palacio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rgomezp/bowser-castle/issues"
+  },
+  "homepage": "https://github.com/rgomezp/bowser-castle#readme",
+  "devDependencies": {
+    "@types/node": "^20.1.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "bowser": "^2.11.0"
+  }
+}
