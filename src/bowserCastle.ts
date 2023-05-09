@@ -12,7 +12,7 @@ const detect = (userAgent: string): IBowserCastle => {
   return {
     mobile: browserInfo.getPlatformType(true) === "mobile",
     tablet: browserInfo.getPlatformType(true) === "tablet",
-    name: browserInfo.getBrowserName(),
+    name: browserInfo.getBrowserName().toLowerCase(),
     version: browserInfo.getBrowserVersion(),
   };
 }
