@@ -1,4 +1,4 @@
-import Bowser from "bowser";
+import * as Bowser from "bowser";
 
 export interface IBowserCastle {
   mobile: boolean;
