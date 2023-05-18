@@ -7,7 +7,7 @@ export interface IBowserCastle {
   version: string;
 }
 
-export const bowserCastle = (userAgent?: string): IBowserCastle => {
+const bowserCastle = (userAgent?: string): IBowserCastle => {
   if (!userAgent && typeof navigator !== "undefined") {
     userAgent = navigator.userAgent;
   }
@@ -20,3 +20,5 @@ export const bowserCastle = (userAgent?: string): IBowserCastle => {
     version: browserInfo.getBrowserVersion(),
   };
 }
+
+export default bowserCastle;

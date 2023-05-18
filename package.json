@@ -1,13 +1,13 @@
 {
   "name": "bowser-castle",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "",
   "main": "dist/bowserCastle.js",
   "typings": "dist/bowserCastle.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "prepublish": "yarn run build"
+    "prepare": "yarn run build"
   },
   "repository": {
     "type": "git",
