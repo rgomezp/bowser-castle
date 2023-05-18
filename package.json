@@ -1,9 +1,10 @@
 {
   "name": "bowser-castle",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "",
   "main": "dist/bowserCastle.js",
   "typings": "dist/bowserCastle.d.ts",
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "prepublish": "yarn run build"
