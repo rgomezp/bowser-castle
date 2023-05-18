@@ -1,6 +1,6 @@
 {
   "name": "bowser-castle",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "",
   "main": "dist/bowserCastle.js",
   "typings": "dist/bowserCastle.d.ts",
