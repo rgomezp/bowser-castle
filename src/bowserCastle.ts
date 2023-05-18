@@ -1,4 +1,4 @@
-import * as Bowser from "bowser";
+import * as bowser from "bowser";
 
 export interface IBowserCastle {
   mobile: boolean;
@@ -7,8 +7,12 @@ export interface IBowserCastle {
   version: string;
 }
 
-const detect = (userAgent: string): IBowserCastle => {
-  const browserInfo = Bowser.getParser(userAgent ?? '');
+export const bowserCastle = (userAgent?: string): IBowserCastle => {
+  if (!userAgent && typeof navigator !== "undefined") {
+    userAgent = navigator.userAgent;
+  }
+
+  const browserInfo = bowser.getParser(userAgent ?? '');
   return {
     mobile: browserInfo.getPlatformType(true) === "mobile",
     tablet: browserInfo.getPlatformType(true) === "tablet",
@@ -16,7 +20,3 @@ const detect = (userAgent: string): IBowserCastle => {
     version: browserInfo.getBrowserVersion(),
   };
 }
-
-const bowserCastle: IBowserCastle = detect(typeof navigator !== 'undefined' ? navigator.userAgent : '');
-
-export default bowserCastle;
